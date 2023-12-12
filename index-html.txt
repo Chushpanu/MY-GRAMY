@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Заметки</title>
+</head>
+// 0.01 попытка создания вэб-сайта по заметкам =(
+<body>
+    <h1>Мои заметки</h1>
+    <ul id="notes"></ul>
+
+    <script>
+        // Отправляем запрос на получение заметок и отображаем их на странице
+        fetch('/api/notes/')
+            .then(response => response.json())
+            .then(notes => {
+                const notesList = document.getElementById('notes');
+                notes.forEach(note => {
+                    const li = document.createElement('li');
+                    li.textContent = `${note.title}: ${note.content}`;
+                    notesList.appendChild(li);
+                });
+            });
+    </script>
+</body>
+</html>
