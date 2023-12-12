@@ -1,0 +1,88 @@
+<Notes-Grani>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Заметки по календарю</title>
+  <style>
+    /* Стили для таблицы календаря */
+    .calendar {
+      width: 100%;
+      border-collapse: collapse;
+    }
+  
+    .calendar th, .calendar td {
+      border: 1px solid #000;
+      padding: 8px;
+      text-align: center;
+    }
+  
+    .calendar th {
+      background-color: #eee;
+      font-weight: bold;
+    }
+  
+    .calendar td {
+      vertical-align: top;
+    }
+  
+    /* Стили для формы создания заметки */
+    .note-form {
+      margin-top: 20px;
+    }
+  
+    .note-form input[type="text"], 
+    .note-form textarea {
+      width: 100%;
+      padding: 8px;
+    }
+  
+    .note-form button {
+      padding: 8px 20px;
+      background-color: #4CAF50;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Заметки</h1>
+
+  <table class="calendar">
+    <thead>
+      <tr>
+        <th>Пн</th>
+        <th>Вт</th>
+        <th>Ср</th>
+        <th>Чт</th>
+        <th>Пт</th>
+        <th>Сб</th>
+        <th>Вс</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note-form">
+    <h2>Создать новую заметку</h2>
+    <form>
+      <label for="date">Дата:</label>
+      <input type="date" id="date" required>
+      
+	  <p></p>
+	  
+      <label for="title">Заголовок:</label>
+      <input type="text" id="title" required>
+      
+      <label for="content">Содержание:</label>
+      <textarea id="content" required></textarea>
+      
+      <button type="submit">Добавить заметку</button>
+    </form>
+  </div>
+</body>
+</html>

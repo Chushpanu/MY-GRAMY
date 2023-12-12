@@ -1,0 +1,91 @@
+!Add a note>
+<html>
+<head>
+    <title>Добавить заметку</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: normal;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .note {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .note h2 {
+            margin: 0 0 10px;
+            font-size: 18px;
+        }
+
+        .note p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        form label {
+            display: block;
+        }
+
+        form input[type="text"], form textarea {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        form button {
+            background-color: #4caf50;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Добавить заметку</h1>
+    </header>
+    <main>
+        <div class="note">
+            <h2>Заголовок заметки</h2>
+            <p>Текст заметки...</p>
+        </div>
+        
+        <form>
+            <label for="title">Заголовок:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="content">Содержание:</label>
+            <textarea id="content" name="content" required></textarea>
+            <button type="submit">Добавить заметку</button>
+        </form>
+    </main>
+</body>
+</html>
